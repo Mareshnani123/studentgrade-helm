@@ -4,4 +4,4 @@ metadata:
   name: student-api-sa
   namespace: {{ .Values.backend.namespace }}
   annotations:
-    azure.workload.identity/client-id: {{ .Values.workload-identity.id }}
+    azure.workload.identity/client-id: {{ .Values.workloadidentity.id }}

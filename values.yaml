@@ -35,7 +35,7 @@ keyvault:
   Name: 'seceret-aks123'
 imagePullSecrets:
   RegistryName: acr-secret
-  data:
+  data: eyJhdXRocyI6eyJodHRwczovL2luZGV4LmRvY2tlci5pby92MS8iOnsidXNlcm5hbWUiOiJ2aWpheSIsInBhc3N3b3JkIjoiU2FyYW55YUAzMzIyMTEiLCJhdXRoIjoiZG1scVlYazZVMkZ5WVc1NVlVQXpNekl5TVRFPSJ9fX0=
   
 #echo -n '{"auths":{"https://index.docker.io/v1/":{"username":"YOUR_DOCKER_USERNAME","password":"YOUR_DOCKER_PASSWORD","email":"YOUR_EMAIL@example.com","auth":"'$(echo -n "YOUR_DOCKER_USERNAME:YOUR_DOCKER_PASSWORD" | base64)'"}}}' | base64 | tr -d '\n'
 #secret:

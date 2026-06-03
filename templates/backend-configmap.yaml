@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: student-grade-api-configmap
+  namespace: {{ .Values.backend.namespace}}
+data:
+  DB_HOST: {{ .Values.postgres.hostname }}
+  DB_NAME: 'students'

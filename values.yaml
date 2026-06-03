@@ -1,0 +1,37 @@
+frontend:
+  replicaCount: 2
+  namespace: grade-submission
+  image:
+    name: studentgrade.azurecr.io/frontend/frontend
+    tag: v1
+  service:
+    type: ClusterIP
+    port: 80
+backend:
+  replicaCount: 2
+  namespace: grade-submission
+  image:
+    name: studentgrade.azurecr.io/backend/backend
+    tag: v1
+  service:
+    type: ClusterIP
+    port: 5000
+hpa:
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 3
+postgres:
+   hostname: "studentgrade.postgres.database.azure.com"
+   database: postgres
+ingress:
+  enabled: true
+  className: nginx
+  path: /
+workload-identity:
+   id: '6b2208e7-0229-48de-aa02-66d5c1b59e4b'
+keyvault:
+  enabled: true
+  Name: 'seceret-aks123'
+#secret:
+  #DB_USER: 'dmlqYXk='
+  #DB_PASS: "U2FyYW55YUAzMzIyMTE="

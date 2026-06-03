@@ -32,12 +32,12 @@ workloadidentity:
    id: '6b2208e7-0229-48de-aa02-66d5c1b59e4b'
 keyvault:
   enabled: true
-  Name: 'seceret-aks123'
+  Name: 'secret-aks123'
 imagePullSecrets:
   RegistryName: acr-secret
   data: eyJhdXRocyI6eyJodHRwczovL2luZGV4LmRvY2tlci5pby92MS8iOnsidXNlcm5hbWUiOiJ2aWpheSIsInBhc3N3b3JkIjoiU2FyYW55YUAzMzIyMTEiLCJhdXRoIjoiZG1scVlYazZVMkZ5WVc1NVlVQXpNekl5TVRFPSJ9fX0=
   
-#echo -n '{"auths":{"https://index.docker.io/v1/":{"username":"YOUR_DOCKER_USERNAME","password":"YOUR_DOCKER_PASSWORD","email":"YOUR_EMAIL@example.com","auth":"'$(echo -n "YOUR_DOCKER_USERNAME:YOUR_DOCKER_PASSWORD" | base64)'"}}}' | base64 | tr -d '\n'
+#echo -n '{"auths":{"studentgrade.azurecr.io":{"username":"studentgrade","password":"97guVYvbAWVuKSW9ZL80bJnBmiN1Vw1sXoUeXsrM1ZcYMO8BozkxJQQJ99CFAC4f1cMEqg7NAAACAZCRQBBL","auth":"'$(echo -n "studentgrade:97guVYvbAWVuKSW9ZL80bJnBmiN1Vw1sXoUeXsrM1ZcYMO8BozkxJQQJ99CFAC4f1cMEqg7NAAACAZCRQBBL" | base64 | tr -d '\n')'"}}}' | base64 | tr -d '\n'
 #secret:
   #DB_USER: 'dmlqYXk='
   #DB_PASS: "U2FyYW55YUAzMzIyMTE="

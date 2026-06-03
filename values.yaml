@@ -20,6 +20,7 @@ hpa:
   enabled: true
   minReplicas: 1
   maxReplicas: 3
+  Utilization: 50
 postgres:
    hostname: "studentgrade.postgres.database.azure.com"
    database: postgres
@@ -32,6 +33,11 @@ workload-identity:
 keyvault:
   enabled: true
   Name: 'seceret-aks123'
+imagePullSecrets:
+  RegistryName: acr-secret
+  data:
+  
+#echo -n '{"auths":{"https://index.docker.io/v1/":{"username":"YOUR_DOCKER_USERNAME","password":"YOUR_DOCKER_PASSWORD","email":"YOUR_EMAIL@example.com","auth":"'$(echo -n "YOUR_DOCKER_USERNAME:YOUR_DOCKER_PASSWORD" | base64)'"}}}' | base64 | tr -d '\n'
 #secret:
   #DB_USER: 'dmlqYXk='
   #DB_PASS: "U2FyYW55YUAzMzIyMTE="

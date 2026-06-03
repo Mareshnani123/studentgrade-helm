@@ -41,7 +41,7 @@ spec:
           effect: "NoSchedule"
       containers:
       - name: student-grade-api
-        image: "{{ .Values.backend.image.repository }}:{{ .Values.backend.image.tag }}"
+        image: "{{ .Values.backend.image.name }}:{{ .Values.backend.image.tag }}"
         envFrom:
           - configMapRef:
              name: student-grade-api-configmap
